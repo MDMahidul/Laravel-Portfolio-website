@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5830f559-427c-47a3-bfa4-5170154567d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +169,7 @@
       <updated>1605089409015</updated>
       <workItem from="1605089410114" duration="2922000" />
       <workItem from="1605174125031" duration="1101000" />
-      <workItem from="1605187272256" duration="1721000" />
+      <workItem from="1605187272256" duration="10338000" />
     </task>
     <servers />
   </component>
