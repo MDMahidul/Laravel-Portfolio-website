@@ -20,14 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5830f559-427c-47a3-bfa4-5170154567d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Layout/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -164,6 +171,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605089409015</updated>
       <workItem from="1605089410114" duration="2922000" />
+      <workItem from="1605174125031" duration="1101000" />
+      <workItem from="1605187272256" duration="1721000" />
     </task>
     <servers />
   </component>
@@ -180,15 +189,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="876" y="155" key="NewPhpClassDialog" timestamp="1605091372748">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="876" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1605091372748" />
-    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1605091390373">
+    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1605188451991">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1605091390373" />
+    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1605188451990" />
   </component>
 </project>
