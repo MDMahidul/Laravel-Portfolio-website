@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5830f559-427c-47a3-bfa4-5170154567d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/Component/HomeCourse.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +149,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -172,6 +176,8 @@
       <workItem from="1605329958848" duration="4958000" />
       <workItem from="1605361951831" duration="9904000" />
       <workItem from="1605506363555" duration="1783000" />
+      <workItem from="1605797951693" duration="1723000" />
+      <workItem from="1605865428542" duration="4644000" />
     </task>
     <servers />
   </component>
@@ -195,9 +201,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="876" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1605091372748" />
-    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1605363946148">
+    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1605798382927">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1605363946148" />
+    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1605798382927" />
   </component>
 </project>
