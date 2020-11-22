@@ -347,7 +347,7 @@ if(serviceName.length==0){
          img: serviceImg
      })
      .then(function(response) {
-         $('#addNeserviceAddConfirmBtnwBtnId').html("Save");
+         $('#serviceAddConfirmBtn').html("Save");
          if(response.status==200){
              if (response.data == 1) {
                  $('#addModal').modal('hide');

@@ -44,4 +44,83 @@ function getCoursesData() {
     
         });
     }
+
+//open Add new modal
+    $('#addNewCourseBtnId').click(function(){
+        $('#addCourseModal').modal('show');
+    });
+
+
+//Course Add Modal Save Button
+$('#CourseAddConfirmBtn').click(function() {
+    var CourseName = $('#CourseNameId').val();
+    var CourseDes = $('#CourseDesId').val();
+    var CourseFee = $('#CourseFeeId').val();
+    var CourseEnroll = $('#CourseEnrollId').val();
+    var CourseClass = $('#CourseClassId').val();
+    var CourseLink = $('#CourseLinkId').val();
+    var CourseImg = $('#CourseImgId').val();
+    
+    CourseAdd(CourseName,CourseDes,CourseFee,CourseEnroll,CourseClass,CourseLink,CourseImg);
+    })
+
+//Course Add Method
+function CourseAdd(CourseName,CourseDes,CourseFee,CourseEnroll,CourseClass,CourseLink,CourseImg) {
+
+    if(CourseName.length==0){
+         toastr.error('Course Name Required');
+     }
+     else if(CourseDes.length==0){
+         toastr.error('Course Description Required');
+     }
+     else if(CourseFee.length==0){
+         toastr.error('Course Fee Required');
+     }
+     else if(CourseEnroll.length==0){
+        toastr.error('Course Enroll Required');
+    }
+    else if(CourseClass.length==0){
+        toastr.error('Course Class Required');
+    }
+    else if(CourseLink.length==0){
+        toastr.error('Course Link Required');
+    }
+    else if(CourseImg.length==0){
+        toastr.error('Course Image Required');
+    }
+     else{
+         $('#CourseAddConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+         axios.post('/CoursesAdd', {
+            course_name: CourseName,
+            course_des: CourseDes,
+            course_fee: CourseFee,
+            course_totalenroll: CourseEnroll,
+            course_totalclass: CourseClass,
+            course_link: CourseLink,
+            course_img: CourseImg
+         })
+         .then(function(response) {
+             $('#CourseAddConfirmBtn').html("Save");
+             if(response.status==200){
+                 if (response.data == 1) {
+                     $('#addCourseModal').modal('hide');
+                     toastr.success('Data Added Successfully');
+                     getCoursesData();
+                 } else {
+                     $('#addCourseModal').modal('hide');
+                     toastr.error('Data Addition Failed');
+                     getCoursesData();
+                 }
+             }else{
+                 $('#addCourseModal').modal('hide');
+                 toastr.error('Something Went Wrong !');
+             }
+             
+         }).catch(function(error) {
+             $('#addCourseModal').modal('hide');
+             toastr.error('Something Went Wrong !');
+         });
+     }
+    
+    }
     
