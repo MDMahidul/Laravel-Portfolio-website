@@ -98,7 +98,30 @@
     </div>
   </div>
 
-
+<!--Add Modal -->
+<div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body  p-5 text-center">
+        <div id="serviceAddForm" class="w-100 ">
+          <h6 class="mb-4">Add New Project</h6>
+          <input type="text" id="ProjectNameAddID" class="form-control mb-4" placeholder="Project Name">
+          <input type="text" id="ProjectDesAddID" class="form-control mb-4" placeholder="Project Description">
+          <input type="text" id="ProjectLinkAddID" class="form-control mb-4" placeholder="Project Link">
+          <input type="text" id="ProjectImgAddID" class="form-control mb-4" placeholder="Project Image">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cancel</button>
+        <button  id="projectAddConfirmBtn" type="button" class="btn btn-sm btn-danger">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Add Modal End -->
+  
+  
 @endsection
 
 @section('script')

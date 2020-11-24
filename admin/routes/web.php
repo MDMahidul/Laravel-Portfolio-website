@@ -38,4 +38,4 @@ Route::get('/getProjectsData','ProjectsController@getProjectsData');
 Route::post('/ProjectsDelete','ProjectsController@ProjectsDelete');
 Route::post('/ProjectsDetails','ProjectsController@getProjectsDetails');
 Route::post('/ProjectsUpdate','ProjectsController@ProjectsUpdate');
-Route::post('/CoursesAdd','ProjectsController@CoursesAdd');
+Route::post('/ProjectsAdd','ProjectsController@ProjectsAdd');

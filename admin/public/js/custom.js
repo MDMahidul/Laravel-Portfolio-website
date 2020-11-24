@@ -192,3 +192,66 @@ $('#ProjectUpdateConfirmBtn').click(function() {
     }
     
     }
+
+// Project Add New Btn Click
+    $('#addNewProjectBtnId').click(function(){
+    $('#addProjectModal').modal('show');
+    })
+    
+    //Service Add Modal Save Button
+    $('#projectAddConfirmBtn').click(function() {
+    var ProjectName = $('#ProjectNameAddID').val();
+    var ProjectDes = $('#ProjectDesAddID').val();
+    var ProjectLink = $('#ProjectLinkAddID').val();
+    var ProjectImg = $('#ProjectImgAddID').val();
+    
+    ProjectsAdd(ProjectName,ProjectDes,ProjectLink,ProjectImg);
+    })
+    
+    //Service Add Method
+    function ProjectsAdd(ProjectName,ProjectDes,ProjectLink,ProjectImg) {
+    
+    if(ProjectName.length==0){
+         toastr.error('Project Name Required');
+     }
+     else if(ProjectDes.length==0){
+         toastr.error('Project Description Required');
+     }
+     else if(ProjectLink.length==0){
+         toastr.error('Project Link Required');
+     }
+     else if(ProjectImg.length==0){
+        toastr.error('Project Image Required');
+    }
+     else{
+         $('#projectAddConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+         axios.post('/ProjectsAdd', {
+            project_name: ProjectName,
+            project_des: ProjectDes,
+            project_link: ProjectLink,
+            project_img: ProjectImg
+         })
+         .then(function(response) {
+             $('#projectAddConfirmBtn').html("Save");
+             if(response.status==200){
+                 if (response.data == 1) {
+                     $('#addProjectModal').modal('hide');
+                     toastr.success('Data Added Successfully');
+                     getProjectsData();
+                 } else {
+                     $('#addProjectModal').modal('hide');
+                     toastr.error('Data Addition Failed');
+                     getProjectsData();
+                 }
+             }else{
+                 $('#addProjectModal').modal('hide');
+                 toastr.error('Something Went Wrong !');
+             }
+             
+         }).catch(function(error) {
+             $('#addProjectModal').modal('hide');
+             toastr.error('Something Went Wrong !');
+         });
+     }
+    
+    }
