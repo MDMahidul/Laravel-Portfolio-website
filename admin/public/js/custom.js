@@ -28,15 +28,15 @@ function getProjectsData() {
                     ).appendTo('#project_table')
                 });
     
-              /*  //Course Table Delete Icon Click
+                //Course Table Delete Icon Click
                 $('.projectDeleteBtn').click(function() {
                     var id = $(this).data('id');
     
-                    $('#CourseDeleteId').html(id);
-                    $('#deleteCourseModal').modal('show');
+                    $('#ProjectDeleteId').html(id);
+                    $('#deleteProjectModal').modal('show');
                 });
     
-                //Course Table Update Icon Click
+                 /*//Course Table Update Icon Click
                 $('.projectEditBtn').click(function() {
                     var id = $(this).data('id');
                     $('#courseEditId').html(id);
@@ -62,4 +62,42 @@ function getProjectsData() {
             $('#wrongDivProject').removeClass('d-none');
     
         });
-    }
+}
+
+//Service Delete Modal Yes Button
+$('#ProjectDeleteConfirmBtn').click(function() {
+    var id = $('#ProjectDeleteId').html();
+    ProjectDelete(id);
+    })
+    
+//Service Delete
+function ProjectDelete(deleteID) {
+
+    $('#ProjectDeleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+
+    axios.post('/ProjectsDelete', {
+        id: deleteID
+    })
+    .then(function(response) {
+        $('#ProjectDeleteConfirmBtn').html("Yes");
+
+        if(response.status==200){
+            if (response.data == 1) {
+                $('#deleteProjectModal').modal('hide');
+                toastr.success('Delete Successfully');
+                getProjectsData();
+            } else {
+                $('#deleteProjectModal').modal('hide');
+                toastr.error('Delete Failed');
+                getProjectsData();
+            }
+        }else{
+        $('#deleteProjectModal').modal('hide');
+        toastr.error('Something Went Wrong !');
+        }
+
+    }).catch(function(error) {
+        $('#deleteProjectModal').modal('hide');
+        toastr.error('Something Went Wrong !');
+    });
+}
