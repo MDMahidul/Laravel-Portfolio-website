@@ -37,22 +37,16 @@ class ProjectsController extends Controller
     function ProjectsUpdate(Request $req){ 
 
         $id=$req->input('id');
-        $course_name=$req->input('course_name');
-        $course_des=$req->input('course_des');
-        $course_fee=$req->input('course_fee');
-        $course_totalenroll=$req->input('course_totalenroll');
-        $course_totalclass=$req->input('course_totalclass');
-        $course_link=$req->input('course_link');
-        $course_img=$req->input('course_img');
+        $project_name=$req->input('project_name');
+        $project_des=$req->input('project_des');
+        $project_link=$req->input('project_link');
+        $project_img=$req->input('project_img');
 
         $result=ProjectsModel::where('id',$id)->update([
-            'course_name'=>$course_name,
-            'course_des'=>$course_des,
-            'course_fee'=>$course_fee,
-            'course_totalenroll'=>$course_totalenroll,
-            'course_totalclass'=>$course_totalclass,
-            'course_link'=>$course_link,
-            'course_img'=>$course_img
+            'project_name'=>$project_name,
+            'project_des'=>$project_des,
+            'project_link'=>$project_link,
+            'project_img'=>$project_img
             ]);
         
         if($result==true){

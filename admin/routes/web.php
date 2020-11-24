@@ -36,6 +36,6 @@ Route::post('/CoursesAdd','CoursesController@CoursesAdd');
 Route::get('/project','ProjectsController@ProjectsIndex');
 Route::get('/getProjectsData','ProjectsController@getProjectsData');
 Route::post('/ProjectsDelete','ProjectsController@ProjectsDelete');
-Route::post('/CoursesDetails','ProjectsController@getCoursesDetails');
-Route::post('/CoursesUpdate','ProjectsController@CoursesUpdate');
+Route::post('/ProjectsDetails','ProjectsController@getProjectsDetails');
+Route::post('/ProjectsUpdate','ProjectsController@ProjectsUpdate');
 Route::post('/CoursesAdd','ProjectsController@CoursesAdd');

@@ -65,6 +65,40 @@
 </div>
 <!--Delete Modal end -->
 
+
+  <!--Update Courses Modal -->
+  <div class="modal fade" id="updateProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+              <h5 class="modal-title">Update Project</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+         </div>
+        <div class="modal-body  text-center">
+            <h6 id="projectEditId" class="mt-4 d-none"></h6>
+            <div id="projectEditForm" class="w-100 d-none">
+                <input type="text" id="projectNameUpdateID" class="form-control mb-4" placeholder="Project Name">
+                <input type="text" id="projecteDesUpdateID" class="form-control mb-4" placeholder="Project Description">
+                <input type="text" id="projecteLinkUpdateID" class="form-control mb-4" placeholder="Project Link">
+                <input type="text" id="projectImgUpdateID" class="form-control mb-4" placeholder="Project Image">
+              </div>
+
+          <!-- loader img -->
+          <img id="projectEditLoader" class="loading-icon m-5" src="{{asset('images/loader.svg')}}">
+          <h6 id="projectEditWrong" class="d-none">Something Went Wrong !</h6>  
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cancel</button>
+          <button  id="ProjectUpdateConfirmBtn" type="button" class="btn  btn-sm  btn-danger">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 @endsection
 
 @section('script')
