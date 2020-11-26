@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\VisitorModel;
 use App\CourseModel;
 use App\ProjectsModel;
+use App\ContactModel;
 
 class HomeController extends Controller
 {
@@ -26,5 +27,25 @@ class HomeController extends Controller
             'CoursesData'=>$CoursesData,
             'ProjectsData'=>$ProjectsData
         ]);
+    }
+
+    function  ContactSend(Request $req){
+        $contact_name = $req->input('contact_name');
+        $contact_mobile = $req->input('contact_mobile');
+        $contact_email = $req->input('contact_email');
+        $contact_msg = $req->input('contact_msg');
+
+        $result=ContactModel::insert([
+            'contact_name'=>$contact_name,
+            'contact_mobile'=>$contact_mobile,
+            'contact_email'=>$contact_email,
+            'contact_msg'=>$contact_msg
+        ]);
+
+        if($result == true){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }
