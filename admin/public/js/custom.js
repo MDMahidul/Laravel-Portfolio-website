@@ -1,96 +1,245 @@
-//For Courses Table(showing data)
-function getContactData() {
+//For Services Table(showing data)
+function getReviewData() {
 
-    axios.get('/getContactData')
+    axios.get('/getReviewData')
         .then(function(response) {
     
             if (response.status == 200) {
     
-                $('#mainDivContact').removeClass('d-none');
-                $('#loaderDivContact').addClass('d-none');
+                $('#mainDivReview').removeClass('d-none');
+                $('#loaderDivReview').addClass('d-none');
     
-                 //to refresh the table
-                $('#contactDataTable').DataTable().destroy();
-                $('#contact_table').empty();
+               //to refresh the table
+                $('#reviewDataTable').DataTable().destroy();
+                $('#review_table').empty();
     
                 var jsonData = response.data;
     
                 $.each(jsonData, function(i, item) {
                     $('<tr>').html(
+                        "<td>" + jsonData[i].name + "</td>" +
+                        "<td>" + jsonData[i].des + "</td>" +
+                        "<td><a class='reviewEditBtn' data-id=" + jsonData[i].id + " ><i class='fas fa-edit'></i></a></td>" +
+                        "<td><a class='reviewDeleteBtn' data-id=" + jsonData[i].id + " ><i class='fas fa-trash-alt'></i></a></td>"
     
-                        "<td>"+ jsonData[i].contact_name +"</td>" +
-                        "<td>" + jsonData[i].contact_mobile + "</td>" +
-                        "<td>" + jsonData[i].contact_email + "</td>" +
-                        "<td>" + jsonData[i].contact_msg + "</td>" +
-                        
-                        "<td><a class='contactDeleteBtn' data-id=" + jsonData[i].id + " ><i class='fas fa-trash-alt'></i></a></td>"
-    
-                    ).appendTo('#contact_table')
+                    ).appendTo('#review_table')
                 });
     
-                //Course Table Delete Icon Click
-                $('.contactDeleteBtn').click(function() {
+    
+                //Service Table Delete Icon Click
+                $('.reviewDeleteBtn').click(function() {
                     var id = $(this).data('id');
     
-                    $('#ContactDeleteId').html(id);
-                    $('#deleteContactModal').modal('show');
-                }); 
+                    $('#ReviewDeleteId').html(id);
+                    $('#deleteReviewModal').modal('show');
+                });
     
     
-                 //add data table libraies
-                $('#contactDataTable').DataTable({"order":false});
+                //Service Table Edit Icon Click
+                $('.reviewEditBtn').click(function() {
+                    var id = $(this).data('id');
+                    $('#reviewEditId').html(id);
+                    ReviewUpdateDetails(id);
+                    $('#updateReviewModal').modal('show');
+                });
+    
+                //add data table libraies
+                $('#reviewDataTable').DataTable({"order":false});
                 $('.dataTables_length').addClass('bs-select');
     
     
             } else {
     
-                $('#loaderDivContact').addClass('d-none');
-                $('#wrongDivContact').removeClass('d-none');
+                $('#loaderDivReview').addClass('d-none');
+                $('#wrongDivReview').removeClass('d-none');
             }
     
         }).catch(function(error) {
     
-            $('#loaderDivContact').addClass('d-none');
-            $('#wrongDivContact').removeClass('d-none');
+            $('#loaderDivReview').addClass('d-none');
+            $('#wrongDivReview').removeClass('d-none');
     
         });
-}
+    }
 
-//Service Delete Modal Yes Button
-$('#ContactDeleteConfirmBtn').click(function() {
-    var id = $('#ContactDeleteId').html();
-    ContactDelete(id);
+//Review Delete Modal Yes Button
+$('#ReviewDeleteConfirmBtn').click(function() {
+    var id = $('#ReviewDeleteId').html();
+    ReviewDelete(id);
     })
     
-//Service Delete
-function ContactDelete(deleteID) {
+//Review Delete
+function ReviewDelete(deleteID) {
 
-    $('#ContactDeleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+    $('#ReviewDeleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+    
+    axios.post('/ReviewDelete', {
+            id: deleteID
+        })
+        .then(function(response) {
+            $('#ReviewDeleteConfirmBtn').html("Yes");
+    
+           if(response.status==200){
+                if (response.data == 1) {
+                    $('#deleteReviewModal').modal('hide');
+                    toastr.success('Delete Successfully');
+                    getReviewData();
+                } else {
+                    $('#deleteReviewModal').modal('hide');
+                    toastr.error('Delete Failed');
+                    getReviewData();
+                }
+           }else{
+            $('#deleteReviewModal').modal('hide');
+            toastr.error('Something Went Wrong !');
+           }
+    
+        }).catch(function(error) {
+            $('#deleteReviewModal').modal('hide');
+            toastr.error('Something Went Wrong !');
+        });
+    }
 
-    axios.post('/ContactDelete', {
-        id: deleteID
-    })
-    .then(function(response) {
-        $('#ContactDeleteConfirmBtn').html("Yes");
+//open Add new modal
+$('#addNewReviewBtnId').click(function(){
+    $('#addReviewModal').modal('show');
+});
 
-        if(response.status==200){
-            if (response.data == 1) {
-                $('#deleteContactModal').modal('hide');
-                toastr.success('Delete Successfully');
-                getContactData();
-            } else {
-                $('#deleteContactModal').modal('hide');
-                toastr.error('Delete Failed');
-                getContactData();
-            }
-        }else{
-        $('#deleteContactModal').modal('hide');
-        toastr.error('Something Went Wrong !');
-        }
 
-    }).catch(function(error) {
-        $('#deleteContactModal').modal('hide');
-        toastr.error('Something Went Wrong !');
-    });
+//Review Add Modal Save Button
+$('#ReviewAddConfirmBtn').click(function() {
+var ReviewName = $('#ReviewNameId').val();
+var ReviewDes = $('#ReviewDesId').val();
+var ReviewImg = $('#ReviewImgId').val();
+
+ReviewAdd(ReviewName,ReviewDes,ReviewImg);
+});
+
+//Review Add Method
+function ReviewAdd(ReviewName,ReviewDes,ReviewImg) {
+
+if(ReviewName.length==0){
+     toastr.error('Review Name Required');
+ }
+ else if(ReviewDes.length==0){
+     toastr.error('Review Description Required');
+ }
+ else if(ReviewImg.length==0){
+    toastr.error('Review Image Required');
+}
+ else{
+     $('#ReviewAddConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+     axios.post('/ReviewAdd', {
+        name: ReviewName,
+        des: ReviewDes,
+        img: ReviewImg
+     })
+     .then(function(response) {
+         $('#ReviewAddConfirmBtn').html("Save");
+         if(response.status==200){
+             if (response.data == 1) {
+                 $('#addReviewModal').modal('hide');
+                 toastr.success('Data Added Successfully');
+                 getReviewData();
+             } else {
+                 $('#addReviewModal').modal('hide');
+                 toastr.error('Data Addition Failed');
+                 getReviewData();
+             }
+         }else{
+             $('#addReviewModal').modal('hide');
+             toastr.error('Something Went Wrong !');
+         }
+         
+     }).catch(function(error) {
+         $('#addReviewModal').modal('hide');
+         toastr.error('Something Went Wrong !');
+     });
+ }
+
 }
 
+
+ //review Update details
+function ReviewUpdateDetails(detailsID) {
+    axios.post('/ReviewDetails', {
+            id: detailsID
+        })
+        .then(function(response) {
+    
+            if (response.status == 200) {
+                $('#reviewEditForm').removeClass('d-none');
+                $('#reviewEditLoader').addClass('d-none');
+                $('#reviewEditWrong').addClass('d-none');
+    
+                var jsonData = response.data;
+                $('#ReviewNameUpdateId').val(jsonData[0].name);
+                $('#ReviewDesUpdateId').val(jsonData[0].des);
+                $('#ReviewImgUpdateId').val(jsonData[0].img);
+            }else{
+                $('#reviewEditLoader').addClass('d-none');
+                $('#reviewEditWrong').removeClass('d-none');
+            }
+    
+        }).catch(function(error) {
+            $('#reviewEditLoader').addClass('d-none');
+            $('#reviewEditWrong').removeClass('d-none');
+        });
+    }
+
+
+    //Review Update Modal Save Button
+$('#ReviewUpdateConfirmBtn').click(function() {
+    var id = $('#reviewEditId').html();
+    var name = $('#ReviewNameUpdateId').val();
+    var des = $('#ReviewDesUpdateId').val();
+    var img = $('#ReviewImgUpdateId').val();
+    
+    ReviewUpdate(id,name,des,img);
+    });
+    
+    //Each Service Update Data
+    function ReviewUpdate(ReviewID,ReviewName,ReviewDes,ReviewImg) {
+    
+    if(ReviewName.length==0){
+        toastr.error('Review Name Required');
+    }
+    else if(ReviewDes.length==0){
+        toastr.error('Review Description Required');
+    }
+    else if(ReviewImg.length==0){
+        toastr.error('Review Image Required');
+    }
+    else{
+        $('#ReviewUpdateConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); //set loadin animation
+        axios.post('/ReviewUpdate', {
+            id: ReviewID,
+            name: ReviewName,
+            des: ReviewDes,
+            img: ReviewImg
+        })
+        .then(function(response) {
+            $('#ReviewUpdateConfirmBtn').html("Save");
+            if(response.status==200){
+                if (response.data == 1) {
+                    $('#updateReviewModal').modal('hide');
+                    toastr.success('Data Update Successfully');
+                    getReviewData();
+                } else {
+                    $('#updateReviewModal').modal('hide');
+                    toastr.error('Data Update Failed');
+                    getReviewData();
+                }
+            }else{
+                $('#updateReviewModal').modal('hide');
+                toastr.error('Something Went Wrong !');
+            }
+            
+        }).catch(function(error) {
+            $('#updateReviewModal').modal('hide');
+            toastr.error('Something Went Wrong !');
+        });
+    }
+    
+    }
+    
