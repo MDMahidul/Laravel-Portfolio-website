@@ -1,7 +1,8 @@
 @extends('Layout.app')
-
+@section('title','Projects')
 @section('content')
 
-    <h1>Project page</h1>
+    @include('Component.ProjectPageTopBanner')
+    @include('Component.AllProjects')
 
 @endsection

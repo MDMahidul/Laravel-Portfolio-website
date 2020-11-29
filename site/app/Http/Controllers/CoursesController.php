@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CourseModel;
 
 class CoursesController extends Controller
 {
     function CoursePage(){
-        return view('Course');
+        $CoursesData=json_decode(CourseModel::orderBy('id','desc')->get());
+        return view('Course',['CoursesData'=>$CoursesData]);
     }
 }

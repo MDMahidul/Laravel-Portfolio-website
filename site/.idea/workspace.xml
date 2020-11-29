@@ -20,14 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5830f559-427c-47a3-bfa4-5170154567d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Course.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Policy.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Projects.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Terms.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Component/AllCourses.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Component/AllProjects.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Component/CoursePageTopBanner.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Component/ProjectPageTopBanner.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Contact.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Component/HomeContact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Component/HomeContact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Policy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Policy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Projects.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Projects.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Terms.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +195,7 @@
       <workItem from="1606300267457" duration="807000" />
       <workItem from="1606314862723" duration="10434000" />
       <workItem from="1606487988152" duration="2344000" />
-      <workItem from="1606655931539" duration="3884000" />
+      <workItem from="1606655931539" duration="10863000" />
     </task>
     <servers />
   </component>
@@ -216,9 +223,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="876" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1605091372748" />
-    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1606659224186">
+    <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1606665629559">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1606659224186" />
+    <state x="1006" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1606665629559" />
   </component>
 </project>
