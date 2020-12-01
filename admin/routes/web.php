@@ -57,3 +57,7 @@ Route::post('/ReviewAdd','ReviewController@ReviewAdd')->middleware('loginCheck')
 Route::get('/Login', 'LoginController@LoginIndex');
 Route::post('/onLogin', 'LoginController@onLogin');
 Route::get('/Logout', 'LoginController@onLogout');
+
+//Admin Photo Gallery
+Route::get('/photo', 'PhotoController@PhotoIndex');
+Route::post('/photoUpload', 'PhotoController@PhotoUpload');

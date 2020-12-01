@@ -11,6 +11,11 @@ padding: 1% 1% 1% 1% ;
 	height: auto;
 }
 
+.form-control:focus {
+    border-color: #FF0000;
+    box-shadow: none;
+}
+
 .count-card-title{
     color: black !important;
     font-size: 38px;
@@ -36,4 +41,27 @@ padding: 1% 1% 1% 1% ;
 .count-card-logo{
     margin-top: -20px !important;
     margin-bottom: 10px;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.imgPreview{
+    border: none;
+    width: 100%;
+    object-fit: cover;
+    height: 320px;
+}
+
+.imgOnRow{
+    border: none !important;
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
 }
