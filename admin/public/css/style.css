@@ -10,3 +10,30 @@ padding: 1% 1% 1% 1% ;
 	width: 100px;
 	height: auto;
 }
+
+.count-card-title{
+    color: black !important;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.count-card-text{
+    margin-bottom: 18px;
+    color: #6E6E6E !important;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.count-card{
+    border-radius: 2px !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80%;
+}
+
+.count-card-logo{
+    margin-top: -20px !important;
+    margin-bottom: 10px;
+}

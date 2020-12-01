@@ -20,22 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5830f559-427c-47a3-bfa4-5170154567d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/AllCourses.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/AllProjects.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/CoursePageTopBanner.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/ProjectPageTopBanner.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/public/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/public/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Courses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Projects.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Projects.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Review.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Visitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Visitor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Course.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Policy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Policy.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Projects.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Projects.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Terms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,8 @@
       <workItem from="1606300267457" duration="807000" />
       <workItem from="1606314862723" duration="10434000" />
       <workItem from="1606487988152" duration="2344000" />
-      <workItem from="1606655931539" duration="10863000" />
+      <workItem from="1606655931539" duration="10926000" />
+      <workItem from="1606807080934" duration="96000" />
     </task>
     <servers />
   </component>
