@@ -27,7 +27,7 @@
             <div class="col-md-3 p-2">
                 <div class="card count-card text-center">
                     <div class="card-body">
-                        <p class="count-card-logo"><i class="fas fa-book-open fa-3x"></i> </p>
+                        <p class="count-card-logo"><i class="fas fa-code fa-3x"></i> </p>
                         <h3 class="count-card-title">{{$TotalProject}}</h3>
                         <p class="count-card-text">Total Projects</p>
                     </div>
@@ -37,7 +37,7 @@
             <div class="col-md-3 p-2">
                 <div class="card count-card text-center">
                     <div class="card-body">
-                        <p class="count-card-logo"><i class="fas fa-code fa-3x"></i> </p>
+                        <p class="count-card-logo"><i class="fas fa-book-open fa-3x"></i> </p>
                         <h3 class="count-card-title">{{$TotalCourse}}</h3>
                         <p class="count-card-text">Total Courses</p>
                     </div>
