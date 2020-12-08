@@ -21,17 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b4b76152-a1c0-483f-9953-a97d8e4cd5fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Photo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -171,6 +167,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606807204737</updated>
       <workItem from="1606807205899" duration="22776000" />
+      <workItem from="1606998375064" duration="4303000" />
+      <workItem from="1607358043065" duration="89000" />
     </task>
     <servers />
   </component>
@@ -187,6 +185,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1006" y="356" key="NewPhpFileDialog" timestamp="1606810617863">

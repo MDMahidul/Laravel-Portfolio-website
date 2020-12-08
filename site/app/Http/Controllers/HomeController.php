@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\HomeSEOModel;
 use App\ServiceModel;
+use Artesaos\SEOTools\Facades\JsonLd;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Illuminate\Http\Request;
 use App\VisitorModel;
 use App\CourseModel;
@@ -24,11 +29,37 @@ class HomeController extends Controller
         $ProjectsData=json_decode(ProjectsModel::orderBy('id','desc')->limit(6)->get());
         $ReviewData=json_decode(ReviewModel::all());
 
+        //SEO config
+        $HomeSeo=HomeSEOModel::all();
+        $actual_link="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $HomeLink="http://$_SERVER[HTTP_HOST]";
+        $HomeImage=$HomeLink."/".$HomeSeo[0]['page_img'];
+
+        SEOMeta::setTitle($HomeSeo[0]['title']);
+        SEOMeta::setDescription($HomeSeo[0]['description']);
+        SEOMeta::setKeywords($HomeSeo[0]['keywords']);
+        SEOMeta::setCanonical($actual_link);
+
+        OpenGraph::addImage($HomeImage);
+        OpenGraph::setDescription($HomeSeo[0]['description']);
+        OpenGraph::setTitle($HomeSeo[0]['share_title']);
+        OpenGraph::setUrl($actual_link);
+        OpenGraph::setSiteName($HomeSeo[0]['share_title']);
+
+        TwitterCard::setTitle($HomeSeo[0]['share_title']);
+
+        JsonLd::setTitle($HomeSeo[0]['share_title']);
+        JsonLd::setDescription($HomeSeo[0]['description']);
+        JsonLd::addImage($HomeImage);
+
+        $speech=HomeSEOModel::all()->random(1);
+
         return view('Home',[
             'ServicesData'=>$ServicesData,
             'CoursesData'=>$CoursesData,
             'ProjectsData'=>$ProjectsData,
-            'ReviewData'=>$ReviewData
+            'ReviewData'=>$ReviewData,
+            'speech'=>$speech
         ]);
     }
 
@@ -42,7 +73,7 @@ class HomeController extends Controller
             'contact_name'=>$contact_name,
             'contact_mobile'=>$contact_mobile,
             'contact_email'=>$contact_email,
-            'contact_msg'=>$contact_msg
+            'contact_msg'=>$contact_msg,
         ]);
 
         if($result == true){
